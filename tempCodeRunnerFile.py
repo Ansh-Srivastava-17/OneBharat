@@ -1,0 +1,6 @@
+income_timing = df[df['type'] == 'CREDIT'].resample('M')['amount'].sum()
+print("Income timing:\n", income_timing)
+income_timing.plot(title="Monthly Income Received")
+plt.xlabel('Month')
+plt.ylabel('Income (INR)')
+plt.show()
